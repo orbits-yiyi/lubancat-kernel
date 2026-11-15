@@ -10,10 +10,11 @@
 | GPIO、设备树、总线与驱动子系统 | [驱动学习路线](docs/learning/03-driver-roadmap.md) |
 | 启动链与 USB-OTG 烧录 eMMC 的方案 | [启动与 eMMC](docs/learning/04-boot-and-emmc.md) |
 | 个人 Fork、版本标签、origin 与 upstream | [源码和远程仓库](docs/learning/05-source-migration.md) |
-| 后续板上小模型与聊天网站 | [本地 AI 计划](docs/learning/02-local-chat.md) |
+| 板上小模型与聊天网站 | [本地 AI 实验进度](docs/learning/02-local-chat.md) |
+| AI 服务自启、知识库与 DuckDNS/Dynu 接入 | [完整部署方案和脚本](docs/learning/06-ai-knowledge-base-deployment.md) |
 | 之前的 -23 构建、TF 卡探索与教学模块记录 | [历史记录](docs/learning/archive/README.md) |
 
-当前重点是源码管理和驱动基础，后续以小实验逐步推进构建、上板验证及应用开发。目标板内存暂按 2GB 规划，实际规格待上板核对。
+当前按小实验推进 Linux 驱动与应用学习。开发板已实测为 4GB / ARM64 / Ubuntu 20.04.6，本地小模型和局域网聊天页已跑通；自启配置已准备，公网访问和文档检索继续分步验收。
 
 代码基线来自 [LubanCat/kernel](https://github.com/LubanCat/kernel)，标签起点为 `c66bf3fcb4610d4444648496e7893c64af84ec64`。本仓库提供 Linux 内核源码；引导程序和完整系统构建涉及的其他 SDK 组件在对应阶段单独准备。
 

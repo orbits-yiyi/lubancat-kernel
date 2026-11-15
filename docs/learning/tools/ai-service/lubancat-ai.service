@@ -1,0 +1,23 @@
+[Unit]
+Description=LubanCat local AI chat server
+After=network.target
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=cat
+EnvironmentFile=/etc/default/lubancat-ai
+ExecStart=/usr/local/bin/lubancat-ai-start
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGINT
+TimeoutStopSec=30
+NoNewPrivileges=true
+PrivateTmp=true
+UMask=0027
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
